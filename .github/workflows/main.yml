@@ -31,6 +31,8 @@ jobs:
         sudo apt-get install libqrencode-dev
     - name: Create Distribution Tarball
       run: |
+        chmod -R 755 autogen.sh
+        chmod -R 755 configure
         ./autogen.sh
         ./configure
         make dist
